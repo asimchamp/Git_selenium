@@ -1,5 +1,6 @@
 selenium
 multiprocessing
-pynput webdriver-manager
+pynput
+webdriver-manager
 pyotp
 fake-useragent
