@@ -1,0 +1,15 @@
+name: Run Selenium On GitHub Action
+on:
+  workflow_dispatch:
+jobs:
+  scrape:
+    runs-on: windows-latest
+    steps:
+      - name: Checking out repo
+        uses: actions/checkout@v3
+      - name: Setting up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Checking Current folder
+        run: cd
