@@ -18,8 +18,8 @@ jobs:
       - name: Checking file downloaded
         run: ls
       - name: unzip chrome
-        run: Expand-Archive -LiteralPath 'D:\a\Git_selenium\Git_selenium\chrome-win64.zip' -DestinationPath D:\a\Git_selenium\Git_selenium
+        run: Expand-Archive -Force D:\a\Git_selenium\Git_selenium\chrome-win64.zip D:\a\Git_selenium\Git_selenium
       - name: Checking extracted file
-        run: Set-Location -Path D:\a\Git_selenium\Git_selenium\chrome-win64 
-      - name: Checking file downloaded
+        run: chdir D:\a\Git_selenium\Git_selenium\chrome-win64 
+      - name: Checking chrome folder present
         run: ls
