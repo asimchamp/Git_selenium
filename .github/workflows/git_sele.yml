@@ -12,4 +12,4 @@ jobs:
         with:
           python-version: '3.9'
       - name: Checking Current folder
-        run: cd
+        run: pwd
