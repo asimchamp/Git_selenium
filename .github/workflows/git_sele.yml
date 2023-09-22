@@ -13,3 +13,11 @@ jobs:
           python-version: '3.9'
       - name: Checking Current folder
         run: pwd
+      - name: Doenload chromium browser
+        run: curl -L -o chrome-win64.zip https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.92/win64/chrome-win64.zip
+      - name: Checking file downloaded
+        run: ls
+      - name: unzip chrome
+        run: Expand-Archive -LiteralPath 'D:\a\Git_selenium\Git_selenium\chrome-win64.zip' -DestinationPath D:\a\Git_selenium\Git_selenium
+      - name: Checking extracted file
+        run: ls
