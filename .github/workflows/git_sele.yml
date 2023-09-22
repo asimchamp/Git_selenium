@@ -11,14 +11,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v4
+        with:
+          path: "requirements.txt"
       - name: Doenload chromium browser
         run: curl -L -o chrome-win64.zip https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.92/win64/chrome-win64.zip
       - name: unzip chrome
         run: Expand-Archive -Force D:\a\Git_selenium\Git_selenium\chrome-win64.zip D:\a\Git_selenium\Git_selenium
-        
-      # Need to fetch reqs if needed
-      - name: Installing all necessary packages
-        run: pip install selenium multiprocessing pynput webdriver-manager pyotp fake-useragent
 
       - name: Running the Python script
         run: python git_sele.py
