@@ -1,5 +1,4 @@
 selenium
-multiprocessing
 pynput
 webdriver-manager
 pyotp
