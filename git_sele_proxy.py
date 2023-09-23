@@ -33,7 +33,7 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument(f'user-agent={user_agent}')
 options.add_experimental_option("useAutomationExtension", "false")
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.binary_location = './/CFT driver/chrome-win64/chrome.exe'
+options.binary_location = 'D:\\a\\Git_selenium\\Git_selenium\\chrome-win64\\chrome.exe'
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
                           options=options, seleniumwire_options=seleniumwire_options)
 
@@ -56,7 +56,7 @@ pan3 = 'C'
 address = (pan2 + ' ' + name + ' ' + name)
 shop_name_var = (name + pan2)
 pan = (pan1 + pan2 + pan3)
-file_path = 'C:\\pic1.png'
+file_path = 'D:\\a\\Git_selenium\\Git_selenium\\pic1.png'
 password = 'Tatabirlaji@1'
 
 wait = WebDriverWait(driver, 300)
