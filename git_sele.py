@@ -49,7 +49,7 @@ pan = (pan1 + pan2 + pan3)
 file_path = 'D:\\a\\Git_selenium\\Git_selenium\\pic1.png'
 password = 'Tatabirlaji@1'
 
-wait = WebDriverWait(driver, 3000)
+wait = WebDriverWait(driver, 120)
 
 driver.get(url1)
 time.sleep(1)
