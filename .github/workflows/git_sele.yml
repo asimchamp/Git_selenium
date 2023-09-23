@@ -25,7 +25,7 @@ jobs:
         run: |
           powershell -ExecutionPolicy Bypass -File set_resolution.ps1
         shell: powershell
-      - name: Time Counter1
+      - name: Time Counter2
         run: Start-Sleep -Seconds 15
       - name: Running the Python script
         run: python git_sele.py
