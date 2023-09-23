@@ -3,3 +3,4 @@ pynput
 webdriver-manager
 pyotp
 fake-useragent
+selenium-wire
