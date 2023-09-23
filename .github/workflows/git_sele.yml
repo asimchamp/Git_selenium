@@ -25,4 +25,4 @@ jobs:
         run: Expand-Archive -Force D:\a\Git_selenium\Git_selenium\chrome-win64.zip D:\a\Git_selenium\Git_selenium
 
       - name: Running the Python script
-        run: python git_sele_proxy.py
+        run: python git_sele.py
