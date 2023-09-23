@@ -1,6 +1,5 @@
-# Define the width and height for the desired screen resolution
-$width = 1920
-$height = 1080
+# Disable confirmation prompts for the Set-DisplayResolution cmdlet
+$ConfirmPreference = 'None'
 
-# Set the screen resolution
-Set-DisplayResolution -Width $width -Height $height
+# Change the display resolution
+Set-DisplayResolution -Width 1920 -Height 1080 -Force
