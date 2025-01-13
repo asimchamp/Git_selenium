@@ -1,4 +1,4 @@
 selenium
 webdriver-manager
 selenium-wire
-undetected-chromedriver
+undetected-chromedriver==2.1.1
