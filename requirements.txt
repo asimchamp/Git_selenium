@@ -1,6 +1,4 @@
 selenium
-pynput
 webdriver-manager
-pyotp
-fake-useragent
 selenium-wire
+undetected-chromedriver
