@@ -32,7 +32,7 @@ jobs:
         START_NUMBER: ${{ github.event.inputs.start_number || '1051' }}
         END_NUMBER: ${{ github.event.inputs.end_number || '1150' }}
         NUM_PROCESSES: ${{ github.event.inputs.num_processes || '4' }}
-      run: python bin/git_sele.py
+      run: python git_sele.py
     
     - name: Upload results
       uses: actions/upload-artifact@v3
