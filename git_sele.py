@@ -1,17 +1,14 @@
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-import undetected_chromedriver.v2 as uc
-
 import time
 
 
-url1 = 'https://www.etsy.com/uk/promotions'
 
-chrome_options = uc.ChromeOptions()
-driver = uc.Chrome(options=chrome_options)
+driver = webdriver.Chrome()
 
 wait = WebDriverWait(driver, 30000)
-
+url1 = 'https://www.etsy.com/uk/promotions'
 driver.get(url1)
 driver.maximize_window()
 time.sleep(3)
@@ -70,7 +67,7 @@ def test_numbers(start, end):
 
 
 # Run the test
-test_numbers(5000, 5300)  # Adjust the range as needed
+test_numbers(5000, 5010)  # Adjust the range as needed
 
 # Close the driver after testing
 driver.quit()
