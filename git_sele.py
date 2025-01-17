@@ -9,13 +9,13 @@ url1 = 'https://www.etsy.com/uk/promotions'
 
 chrome_options = uc.ChromeOptions()
 
-driver = uc.Chrome(options=chrome_options)
+driver = uc.Chrome(use_subprocess=True, options=chrome_options)
 
 wait = WebDriverWait(driver, 30000)
 
 driver.get(url1)
 driver.maximize_window()
-time.sleep(10)
+time.sleep(3)
 
 
 def test_numbers(start, end):
@@ -34,6 +34,7 @@ def test_numbers(start, end):
         # Clear the input field and enter the number
         input_field.clear()
         input_field.send_keys(str(number))
+        time.sleep(0.3)
         button.click()
 
         # Wait for a moment to allow the page to process the input
@@ -46,8 +47,7 @@ def test_numbers(start, end):
                 print(f'❌ {number} failed: {error_message.text}')
                 results['failed'].append(number)
                 # Refresh the page to continue testing
-                driver.refresh()
-                time.sleep(2)  # Wait for the page to reload
+                time.sleep(0.3)  # Wait for the page to reload
                 continue  # Skip to the next number
             else:
                 # If the error message is not found, treat it as success
@@ -71,7 +71,7 @@ def test_numbers(start, end):
 
 
 # Run the test
-test_numbers(2401, 2450)  # Adjust the range as needed
+test_numbers(5000, 5300)  # Adjust the range as needed
 
 # Close the driver after testing
 driver.quit()
