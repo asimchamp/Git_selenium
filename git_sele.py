@@ -40,20 +40,20 @@ def test_numbers(start, end):
         try:
             error_message = driver.find_element(By.XPATH, '//*[@id="content"]/div[1]/div[2]/div[1]/form/div[2]/span')
             if "Please enter a valid promotion code" in error_message.text:
-                print(f'❌ {number} failed: {error_message.text}')
+                print(f' {number} failed: {error_message.text}')
                 results['failed'].append(number)
                 # Refresh the page to continue testing
                 time.sleep(0.3)  # Wait for the page to reload
                 continue  # Skip to the next number
             else:
                 # If the error message is not found, treat it as success
-                print(f'✅ {number} treated as success (no error message found)')
+                print(f' {number} treated as success (no error message found)')
                 results['working'].append(number)
                 time.sleep(5)  # Wait for 5 seconds before going back to the page
                 driver.get('url1')  # Navigate back to the target page
                 continue  # Continue to the next number
         except:
-            print(f'✅✅ {number} treated as success (no error message found)')
+            print(f' {number} treated as success (no error message found)')
             time.sleep(5)  # Wait for 5 seconds before going back to the page
             driver.get(url1)  # Navigate back to the target page
             continue  # Continue to the next number
