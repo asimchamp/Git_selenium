@@ -67,7 +67,7 @@ def test_numbers(start, end):
 
 
 # Run the test
-test_numbers(5000, 5010)  # Adjust the range as needed
+test_numbers(2230, 2235)  # Adjust the range as needed
 
 # Close the driver after testing
 driver.quit()
