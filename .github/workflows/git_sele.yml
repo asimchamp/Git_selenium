@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -U selenium
-        pip install undetected-chromedriver==2.1.1
+        pip install undetected-chromedriver
     
     - name: Run promotion code test
       run: python git_sele.py
