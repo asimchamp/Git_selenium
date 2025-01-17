@@ -9,7 +9,7 @@ url1 = 'https://www.etsy.com/uk/promotions'
 
 chrome_options = uc.ChromeOptions()
 
-driver = uc.Chrome(use_subprocess=True, options=chrome_options)
+driver = uc.Chrome(options=chrome_options)
 
 wait = WebDriverWait(driver, 30000)
 
