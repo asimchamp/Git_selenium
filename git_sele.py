@@ -54,6 +54,7 @@ def test_numbers(start, end):
                 continue  # Continue to the next number
         except:
             print(f' {number} treated as success (no error message found)')
+            results['working'].append(number)
             time.sleep(5)  # Wait for 5 seconds before going back to the page
             driver.get(url1)  # Navigate back to the target page
             continue  # Continue to the next number
