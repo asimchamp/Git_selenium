@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-import undetected_chromedriver as uc
+import undetected_chromedriver.v2 as uc
 
 import time
 
@@ -8,8 +8,7 @@ import time
 url1 = 'https://www.etsy.com/uk/promotions'
 
 chrome_options = uc.ChromeOptions()
-
-driver = uc.Chrome(use_subprocess=True, options=chrome_options)
+driver = uc.Chrome(options=chrome_options)
 
 wait = WebDriverWait(driver, 30000)
 
